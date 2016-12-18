@@ -1,11 +1,11 @@
 --file name: config.lua
 local module = {}
-module.SSID = {}
-module.SSID["SSID"] = "WiFi PASSWORD"
-module.HOST = "Azure iot hub host name"
-module.PORT = 8883
-module.USERNAME = "iot hub host name/device id"
-module.PASSWORD = "SAS token"
-module.ID = node.chipid()
-module.ENDPOINT = "devices/"..node.chipid().."/messages"
+    -- module.SSID = {}
+    --  module.SSID["SSID"] = "WiFi PASSWORD"
+    module.ID = node.chipid()
+    module.HOST = "IotLightSensorDemo.azure-devices.net"
+    module.PORT = 8883
+    module.USERNAME = "IotLightSensorDemo.azure-devices.net/"..module.ID
+    module.PASSWORD = "SharedAccessSignature sig={signature}&se={expiry}&sr={URL-encoded-resourceURI}"
+    module.ENDPOINT = "devices/"..module.ID.."/messages"
 return module

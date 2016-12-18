@@ -14,8 +14,12 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+
 # Windows shortcuts
 *.lnk
+
+# VS Code files
+.vscode
 
 # =========================
 # Operating System Files
